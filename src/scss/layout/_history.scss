@@ -1,0 +1,19 @@
+@use 'base/mixins' as m;
+.history_content{
+    h2{
+        padding: 2rem 0;
+    }
+
+    p{
+        margin: 0 5%;
+    }
+    @include m.tablet {
+        p{
+            margin: 0 10%;
+            &:last-child{
+                padding-bottom: 2rem;
+            }
+        }
+    }
+    
+}

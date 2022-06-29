@@ -1,0 +1,80 @@
+@use 'base/variables'as v;
+@use 'base/mixins'as m;
+
+.about_menu {
+    
+    background-color  : v.$blancoRoto;
+    box-shadow        : 0px 0px 27px 5px rgba(255, 255, 255, 0.89);
+    -webkit-box-shadow: 0px 0px 27px 5px rgba(255, 255, 255, 0.89);
+    -moz-box-shadow   : 0px 0px 27px 5px rgba(255, 255, 255, 0.89);
+    h2 {
+        padding-top   : 1rem;
+        text-align    : center;
+        color         : v.$cafe;
+        text-transform: uppercase;
+        font-family   : v.$fuente4;
+        font-size     : 4rem;
+    }
+
+    .image {
+        margin: 1rem;
+    }
+}
+
+.menu_content{
+    @include m.tablet {
+        @include m.grid;
+
+        .content_image{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    @include m.desktop {
+        img{
+            width: 40rem;
+            height: 40rem;
+            margin: 0 auto;
+            border:  solid v.$cafe;
+        }
+    }
+}
+
+.content_image {
+    text-align: center;
+
+    h3 {
+        font-family: v.$fuente4;
+        font-size  : 4rem;
+    }
+
+    ul {
+        margin : 0;
+        padding: 1rem;
+    }
+
+    li {
+        line-height: 2;
+    }
+}
+
+
+.hours{
+    text-align: center;
+    margin: 0 auto;
+
+    ul{
+        padding: 0;
+
+        li{
+            margin-top: 1rem;
+        }
+    }
+
+    h3{
+        font-family: v.$fuente4;
+        font-size: 4rem;
+    }
+}
